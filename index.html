@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>BARTA - E2EE Communication Platform</title>
+    <meta name="description" content="Connect Beyond Boundaries. A complete, premium, privacy-focused messaging platform with genuine end-to-end encryption, WebRTC calling, and PWA support." />
+    <meta property="og:title" content="BARTA - E2EE Communication Platform" />
+    <meta property="og:description" content="Connect Beyond Boundaries. A complete, premium, privacy-focused messaging platform with genuine end-to-end encryption, WebRTC calling, and PWA support." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <!-- PWA & Mobile Web App Meta Tags -->
+    <meta name="theme-color" content="#090d16" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="BARTA" />
+    <link rel="icon" type="image/svg+xml" href="./icons/barta-logo.svg" />
+    <link rel="apple-touch-icon" href="./icons/icon-192.png" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+  </head>
+  <body class="bg-[#090d16] text-slate-100 antialiased selection:bg-emerald-500/30 selection:text-emerald-300 overflow-hidden">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Production service worker registration
+      if ('serviceWorker' in navigator && window.location.protocol.startsWith('http')) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js').catch((err) => {
+            console.log('SW registration note:', err?.message);
+          });
+        });
+      }
+    </script>
+  </body>
+</html>

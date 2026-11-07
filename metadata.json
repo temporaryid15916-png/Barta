@@ -1,0 +1,10 @@
+{
+  "name": "BARTA - E2EE Communication Platform",
+  "description": "Connect Beyond Boundaries. A complete, premium, privacy-focused messaging platform with genuine end-to-end encryption, WebRTC calling, and PWA support.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "display-capture"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
