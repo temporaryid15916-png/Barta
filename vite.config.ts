@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 
 export default defineConfig({
-  base: './', // এই লাইনটি যোগ করতে হবে বা ঠিক করতে হবে
+  base: './',
   plugins: [react()],
   resolve: {
     alias: {
